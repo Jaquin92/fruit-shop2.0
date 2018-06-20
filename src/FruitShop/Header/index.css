@@ -1,0 +1,13 @@
+header{
+    display: flex;
+    align-items: flex-end;
+    height:10vh;
+    border-bottom: solid 5px rgb(59, 193, 124);
+  }
+  
+  header h1{
+    background-color: rgb(59, 193, 124);
+    margin-left:60px;
+    color:white;
+    padding:0px 50px;
+  }
