@@ -1,1 +1,1 @@
-# fruit-shop2.0
+Fruit shop built with React/Redux.

@@ -1,1 +1,0 @@
-Fruit shop built with React/Redux.
