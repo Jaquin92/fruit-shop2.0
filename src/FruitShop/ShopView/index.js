@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Shop from './Shop';
 
-export default class extends Component {
+class ShopView extends Component {
 
     render() {
-        return <Shop />
+        return <Shop products={this.props.data} />
     }
 };
+
+const mapStateToProps = state => state;
+export default connect(mapStateToProps)(ShopView);

@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import ShopCard from './ShopCard';
-import { connect } from 'react-redux';
 
 import './index.css';
 
-class Shop extends Component {
+export default class Shop extends Component {
 
     product() {
-        return this.props.data.map((item, index) => {
+        return this.props.products.map((item, index) => {
             return <ShopCard key={index} product={item} />
         })
     }
@@ -18,5 +17,3 @@ class Shop extends Component {
     }
 };
 
-const mapStateToProps = state => state;
-export default connect(mapStateToProps)(Shop);
