@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FormattedNumber } from 'react-intl';
 import CartCard from './CartCard';
 
 import './index.css';
@@ -9,7 +10,7 @@ export default class Cart extends Component {
         return this.props.cartItems.map((item, index) => {
             return <CartCard key={index} item={item} />
         })
-    }
+    };
 
     render() {
         return (

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FormattedNumber } from 'react-intl';
 
 export default class CartCard extends Component {
     constructor(props) {
@@ -14,7 +15,7 @@ export default class CartCard extends Component {
                     <button >+</button>
                 </span>
             </div>
-            <div id="cart-price" > <span>@ ${product.price} each =  <span>${product.inCart * product.price}</span> </span>
+            <div id="cart-price" > <span>@ <FormattedNumber value={product.price} style='currency' currency='USD' minimumFractionDigits={2} maximumFractionDigits={2} /> each =  <FormattedNumber value={product.inCart * product.price} style='currency' currency='USD' minimumFractionDigits={2} maximumFractionDigits={2} />  </span>
                 <p >Delete</p>
             </div>
         </div>)

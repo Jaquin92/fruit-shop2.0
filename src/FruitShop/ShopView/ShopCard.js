@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FormattedNumber } from 'react-intl';
 
 class ShopCard extends Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class ShopCard extends Component {
             <div id='item-card' >
                 <img src={product.imgSrc} alt="fruit product" />
                 <span id='item-name' >{product.itemName.charAt(0).toUpperCase() + product.itemName.slice(1)}</span>
-                <span>${product.price}</span>
+                <FormattedNumber value={product.price} style='currency' currency='USD' minimumFractionDigits={2} maximumFractionDigits={2} />
                 <span>{product.quantityRemaining} In Stock</span>
                 <button id='add-to-cart' >Add to Cart</button>
             </div>)
