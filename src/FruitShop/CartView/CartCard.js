@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+//converts decimal numbers in to usd
 import { FormattedNumber } from 'react-intl';
 
 export default class CartCard extends Component {

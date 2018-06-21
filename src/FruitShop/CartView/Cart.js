@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
+//Formats decimal numbers in to usd
 import { FormattedNumber } from 'react-intl';
 import CartCard from './CartCard';
 
 import './index.css';
 
 export default class Cart extends Component {
-
+    //returns cartcards containing cart items
     itemsInCart() {
         return this.props.cartItems.map((item, index) => {
             return <CartCard functions={this.props.functions} key={index} item={item} />
         })
     };
+    //calculates cart total
     grandTotal() {
         let total = 0;
         this.props.cartItems.map(item => {
