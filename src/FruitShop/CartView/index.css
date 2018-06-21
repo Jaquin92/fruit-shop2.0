@@ -20,14 +20,14 @@
   #checkout button{
     background: lightcyan;
     padding: 5px 30px;
+    margin: 0px 5px;
     border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
   
   }
-  #checkout button:hover{
-    cursor: pointer;
-  }
+  
   #cart-price{
     height:30px;
     width:100%;
@@ -55,7 +55,7 @@
   
   #cart-thumb{
     height:50px;
-    width:60%;
+    width:70%;
     padding-left:10px;
     color:black;
     display: flex;

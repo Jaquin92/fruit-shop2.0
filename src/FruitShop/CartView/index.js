@@ -5,7 +5,7 @@ import Cart from './Cart';
 
 class CartView extends Component {
     render() {
-        // functions to be passed down as props
+        // functions to be passed down as props in to the Cart components
         let cartFunctions = {
             decrementFromCart: this.props.decrementFromCart,
             addToCart: this.props.addToCart,

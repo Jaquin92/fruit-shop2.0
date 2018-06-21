@@ -19,6 +19,7 @@ const initialState = {
 export const addToCart = (item) => {
     let cart = initialState.cart;
     if (item.quantityRemaining === 0) {
+        alert(`Sorry, we are currently out of ${item.itemName}'s`)
         return {
             type: ADD_TO_CART,
             payload: cart
