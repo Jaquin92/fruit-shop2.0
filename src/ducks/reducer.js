@@ -18,6 +18,7 @@ const initialState = {
 //addToCart or increment number in cart
 export const addToCart = (item) => {
     let cart = initialState.cart;
+    //checking if item out of stock
     if (item.quantityRemaining === 0) {
         alert(`Sorry, we are currently out of ${item.itemName}'s`)
         return {
@@ -25,6 +26,7 @@ export const addToCart = (item) => {
             payload: cart
         }
     };
+    //checking if item is in cart and if more quantity available
     for (let i = 0; i < cart.length; i++) {
         if (cart[i].itemName === item.itemName) {
             if (cart[i].inCart === item.quantityRemaining) {
@@ -40,6 +42,7 @@ export const addToCart = (item) => {
             }
         }
     };
+    //else push one of item in to cart
     item.inCart = 1;
     cart.push(item)
     return {
@@ -53,7 +56,7 @@ export const addToCart = (item) => {
 export const decrementFromCart = (item) => {
 
     let cart = initialState.cart;
-
+    //checking if #incart is equal to zero, else decrement incart value by 1
     for (let i = 0; i < cart.length; i++) {
         if (cart[i].itemName === item.itemName) {
             if (cart[i].inCart === 0) {
@@ -76,7 +79,7 @@ export const decrementFromCart = (item) => {
 
 export const deleteFromCart = (item) => {
     let cart = initialState.cart;
-
+    //slicing item from cart
     for (let i = 0; i < cart.length; i++) {
         if (cart[i].itemName === item.itemName) {
             cart.splice(i, 1)
@@ -93,7 +96,7 @@ export const deleteFromCart = (item) => {
 export const confirmPurchase = () => {
     let inventory = initialState.inventory;
     let cart = initialState.cart;
-
+    //looping and updating inventory information
     for (let i = 0; i < inventory.length; i++) {
         for (let j = 0; j < cart.length; j++) {
             if (inventory[i].itemName === cart[j].itemName) {
@@ -102,6 +105,7 @@ export const confirmPurchase = () => {
             }
         }
     };
+    //emptying cart
     initialState.cart = []
     return {
         type: CONFIRM_PURCHASE,
