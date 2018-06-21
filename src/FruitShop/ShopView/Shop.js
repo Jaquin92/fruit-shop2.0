@@ -7,12 +7,11 @@ export default class Shop extends Component {
 
     product() {
         return this.props.products.map((item, index) => {
-            return <ShopCard key={index} product={item} />
+            return <ShopCard addToCart={this.props.addToCart} key={index} product={item} />
         })
     }
 
     render() {
-
         return <div id='shop' >{this.product()}</div>
     }
 };
