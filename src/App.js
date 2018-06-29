@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Header from './FruitShop/Header';
-import FruitShop from './FruitShop';
+import Header from './components/FruitShop/Header';
+import routes from './routes';
 
 import './App.css';
 
@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <FruitShop />
+        {routes}
       </div>
     );
   }

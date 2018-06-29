@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addToCart } from '../../ducks/reducer';
+import { addToCart } from '../../../ducks/reducer';
 import Shop from './Shop';
 
 class ShopView extends Component {

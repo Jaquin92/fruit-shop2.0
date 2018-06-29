@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addToCart, decrementFromCart, deleteFromCart, confirmPurchase } from '../../ducks/reducer'
+import { addToCart, decrementFromCart, deleteFromCart, confirmPurchase } from '../../../ducks/reducer'
 import Cart from './Cart';
 
 class CartView extends Component {
